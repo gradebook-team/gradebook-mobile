@@ -23,8 +23,11 @@ export default class LogoPrimary extends React.Component {
     }
 
     render (){
+        let style = {height: 30, width: 120};
+
+
         return (
-            <Svg style = {{height: 30, width: 120}}>
+            <Svg style = {style}>
             <G scale = '1'>
                 <Path class="st0" fill = '#03E8B4' d="M77.4,10.3c0.7,0.2,1.3,0.5,1.8,1c1.3,1.4,1.4,3.8,0.3,5.4c-0.9,1.2-2.1,1.8-3.6,1.9c-2.3,0.1-4.6,0-6.9,0
                     c-0.3,0-0.2-0.2-0.2-0.4c0-4.5,0-9,0-13.6c0-0.4,0-0.9,0-1.3c0-0.2,0-0.3,0.3-0.3c2.1,0,4.2,0,6.3,0c1.5,0,2.8,0.6,3.6,2
