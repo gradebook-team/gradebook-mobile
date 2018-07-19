@@ -10,9 +10,6 @@ import api from './Api/Api';
 
 import fetch from 'fetch';
 
-console.log("FETCH LIBRARY");
-console.log(fetch);
-
 import { createStackNavigator, } from 'react-navigation'
 
 class LoginPage_ extends React.Component {
@@ -57,7 +54,7 @@ class GradePage_ extends React.Component {
   
   componentWillMount = async () => {
     let res = await api.fetchGrades();
-
+    
     if (res.json.success) {
       this.setState({
         grades: res.json.grades
@@ -80,55 +77,6 @@ export default App = createStackNavigator({
   Login: { screen: LoginPage_, title: "Login" },
   Grades: { screen: GradePage_ }
 })
-
-/*export default class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      loading: true
-    }
-
-    setInterval(() => {
-      this.setState({
-        loading: false
-      })
-    }, 10)
-  }
-
-  render() {
-    let display;
-    if (this.state.loading){
-      display = <Splash/>
-    }else{
-      display = <LoginPage/>
-    }
-
-    return <View style = {styles.container}>
-      {display}
-    </View>
-  }
-}*/
-
-/*
-<View style={styles.container}>
-        
-        <TouchableNativeFeedback
-          onPress = {() => {
-            Alert.alert("Pressed!");
-          }}
-          title = "Press me!"
-          style = {{
-            borderRadius: 8,
-            paddingTop: 20,
-            paddingBottom: 20
-          }}>
-            <View style = {{minWidth: 0, minHeight: 0, backgroundColor: '#f09080', borderRadius: 8}}>
-              <Text style = {{fontFamily: "sofia pro", marginTop: 10, marginRight: 40, marginBottom: 10, marginLeft: 40}}>Press me t</Text>
-            </View>
-          </TouchableNativeFeedback>
-      </View>*/
-    
 
 const styles = StyleSheet.create({
   container: {

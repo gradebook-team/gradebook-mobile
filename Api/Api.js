@@ -39,5 +39,14 @@ exports.fetchGrades = async function () {
             },
             // credentials: "include": will include with integration
         })
+
+        console.log(res);
+
+        let json = await res.json();
+        res.json = json;
+
+        return res;
+    } catch (err) {
+        throw err;
     }
 }
