@@ -47,7 +47,7 @@ class GradePage_ extends React.Component {
     super(props);
 
     this.state = {
-      grades: {},
+      grades: [],
       failed: false
     }
   }
@@ -69,12 +69,12 @@ class GradePage_ extends React.Component {
   render (){
     return this.state.failed ? <View style = {styles.container}>
       <Text>Failed to load grades!</Text>
-    </View> : <GradePage grades = {this.state.grades}/>
+    </View> : <GradePage classes = {this.state.grades}/>
   }
 }
 
 export default App = createStackNavigator({
-  Login: { screen: LoginPage_, title: "Login" },
+  Login: { screen: GradePage_, title: "Login" },
   Grades: { screen: GradePage_ }
 })
 
