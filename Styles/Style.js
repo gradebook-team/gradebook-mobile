@@ -7,6 +7,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    containerNoCenter: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center'
+    },
+    containerLeft: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'flex-start'
+    },
     absoluteContainer: {
         flex: 1,
         backgroundColor: '#fff',
@@ -32,7 +42,13 @@ const styles = StyleSheet.create({
         paddingBottom: 20
     },
     gradeCard: {
-
+        borderRadius: 6,
+        marginTop: 10,
+        marginRight: 30,
+        marginLeft: 30,
+        padding: 25,
+        alignSelf: "stretch",
+        height: 160,
     }
 });
 
