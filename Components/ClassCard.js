@@ -5,11 +5,4 @@ import LogoPrimary from '../svg.js'
 
 import styles from '../Styles/Style';
 
-export default class Splash extends React.Component {
-    render() {
-      return <View style = {styles.container}>
-        <LogoPrimary/>
-      </View>
-    }
-  }
-
+//export default 
